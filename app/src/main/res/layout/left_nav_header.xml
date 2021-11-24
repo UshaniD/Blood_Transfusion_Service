@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_view"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/backgroundOld"
+    android:gravity="bottom|center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".LeftNavHeader">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_img_app" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oswald"
+        android:text="BLOOD TRANSFUSION"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

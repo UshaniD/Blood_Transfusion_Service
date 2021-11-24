@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_menu"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/aboutus_menu"
+            android:icon="@drawable/ic_aboutus"
+            android:title="About Us" />
+        <item
+            android:id="@+id/info"
+            android:icon="@drawable/ic_info"
+            android:title="Information" />
+    </group>
+    <item android:title="Summary">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/facilitator_info_menu"
+                    android:icon="@drawable/ic_donors"
+                    android:title="Facilitator Info" />
+                <item
+                    android:id="@+id/blood_issue_registry_menu"
+                    android:icon="@drawable/ic_blood_drop"
+                    android:title="Blood Issued Registry" />
+
+                <item
+                    android:id="@+id/blood_received_registry_menu"
+                    android:icon="@drawable/ic_blood_issue"
+                    android:title="Blood Received Registry" />
+
+                <item
+                    android:id="@+id/blood_request_menu"
+                    android:icon="@drawable/ic_blood_request"
+                    android:title="Blood Requests Registry" />
+
+                <item
+                    android:id="@+id/request_blood_menu"
+                    android:icon="@drawable/ic_search"
+                    android:title="View/Request blood" />
+
+                <item
+                    android:id="@+id/analysis_menu"
+                    android:icon="@drawable/ic_blood_stock"
+                    android:title="Blood Stock Analysis" />
+
+                <item
+                    android:id="@+id/campaigns_menu"
+                    android:icon="@drawable/ic_campaign_history"
+                    android:title="Upcoming Campaigns" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Settings">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/profile_menu"
+                    android:icon="@drawable/ic_profile"
+                    android:title="Profile" />
+                <item
+                    android:id="@+id/logout_menu"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Log out" />
+            </group>
+        </menu>
+    </item>
+</menu>

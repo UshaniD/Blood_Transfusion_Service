@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="30dp"
+    tools:context=".FacilitatorSignup2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToPreviousScreen"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_arrow"
+            android:transitionName="transition_back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/oswald"
+            android:gravity="center"
+            android:text="CREATE ACCOUNT"
+            android:textColor="@color/black"
+            android:textSize="40dp"
+            android:transitionName="transition_title_txt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Select date of birth"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <DatePicker
+                android:id="@+id/input_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_border"
+                android:calendarTextColor="@color/black"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:fontFamily="sans-serif-condensed"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:spinnersShown="true"
+                android:theme="@style/date_picker_theme"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Choose gender"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <RadioGroup
+                android:id="@+id/input_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/input_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Male"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textColorLink="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/input_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Female"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textColorLink="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/input_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Other"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textColorLink="@color/black" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_user_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="15dp"
+            android:elevation="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="15dp"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/main_button_color" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/secondary_button_color"
+            android:elevation="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="moveToLoginScreen"
+            android:padding="15dp"
+            android:text="LOGIN"
+            android:textSize="18dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</ScrollView>

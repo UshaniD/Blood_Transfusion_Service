@@ -1,0 +1,471 @@
+<resources>
+    <string name="app_name">Blood Transfusion Service</string>
+    <string name="title_activity_signup">signup</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="navigation_open">Open navigation drawer</string>
+    <string name="navigation_close">Close navigation drawer</string>
+
+    <string name="aboutus">National Blood Transfusion Service is a decentralized unit which comes under Ministry of Health, Sri Lanka.
+        NBTS is the sole supplier of blood and blood products to all state hospitals and some of the private hospitals which are registered under
+        Ministry of Health for supply of blood and blood products.\n\nHaving its head quarters at National Blood Centre (NBC), NBTS has 96 blood banks island wide.
+        The categorization of blood banks is as follows.\n\n1. National Blood Centre - the head quarters.\n2. Cluster Centres.\n3. Peripheral Blood Banks.\n\n<a href="http://www.nbts.health.gov.lk/index.php/about/cluster-system"><b>Read More</b></a>
+    </string>
+
+    <string name="information"><b><u>Location Selection Help\n\n</u></b><b>1. Map will take your current location automatically when you open the map.\n</b>
+        - You can select your current location by clicking on the marker.\n\n
+        <b>2. Search a location on your preference by typing on the search bar and click search. \n</b>
+    - You need to give a valid location. Once the location displays you can click on the marker and select the location.\n\n
+        <b>3. Select a location on your preferences apart from above ways.\n</b>
+        - You can long press on the map where you need to get as a location. Once marker add on that location you can select that by clicking on the marker. \n\n
+        <b>4. Select current location.\n</b>
+        - If you need to come again to your current location, you can click on the location icon on the right bottom of the map and select the current location by clicking on the map.\n\n
+        <b><u>Donate Blood\n\n</u>Who can donate blood?\n\n</b>The person must fulfill several criteria to be accepted as a blood donor.
+        These criteria are set forth to ensure the safety of the donor as well as the quality of donated blood.\n\n
+        <b>Donor Selection Criteria\n\n</b>- Age above 18 years and below 60 years.\n- If previously donated, at least 4 months should be elapsed since the date
+        of previous donation.\n- Hemoglobin level should be more than 12g/dL. (this blood test is done prior to each blood donation)\n
+        - Free from any serious disease condition or pregnancy.\n- Should have a valid identity card or any other document to prove the identity.\n
+        - Free from "Risk Behaviours".\n\n<b>Risk Behaviours\n\n</b>- Homosexuals.\n- Sex workers and their clients.\n- Drug addicts.\n- Engaging in sex with any of the above.\n
+        - Having more than one sexual partner\n\n<b>Type of Donors\n\n</b>- Voluntory non remunerated donors. (donate for the sake of others and do not expect any benefit. their blood is considered safe and healthy)\n
+        - Replacement donors. (donate to replace the units used for their friends or family members)\n- Paid donors. (receive payment for donation)\n
+        - Directed donors. (donate only for a specific patient requirement)\n\n\nReplacement and Paid donors are no longer accepted by NBTS.\nReplacement donation was carried out until recently in some blood banks due to the shortage of blood stocks.
+        Asking patients for replacement donors will lead to more pressure on the relatives, who are already in stress and this in turn results in illegal paid donations.\n
+        Directed donations are used in certain conditions such as in rare blood groups.NBTS achieved the mighty figure of 100% voluntory non-remunerated blood donor base.\n\n
+        <b>Instructions to organize a blood donation campaign</b>\n\n<a href="http://www.nbts.health.gov.lk/index.php/about/organize-a-donor-camp/book/2/1?page=1">Read More</a></string>
+
+    <string name="facilitatorInformation"><b><u>General guidelines to register new donor</u></b>\n\n
+1. Go to register new donor page\n
+2. Enter user information\n
+3. Verify OTP code which sent to user mobile number\n
+4. Donor can log into the system using mobile number and password\n\n
+
+        <b><u>Location Selection Help\n\n</u></b><b>1. Map will take your current location automatically when you open the map.\n</b>
+        - You can select your current location by clicking on the marker.\n\n
+        <b>2. Search a location on your preference by typing on the search bar and click search. \n</b>
+    - You need to give a valid location. Once the location displays you can click on the marker and select the location.\n\n
+        <b>3. Select a location on your preferences apart from above ways.\n</b>
+        - You can long press on the map where you need to get as a location. Once marker add on that location you can select that by clicking on the marker. \n\n
+        <b>4. Select current location.\n</b>
+        - If you need to come again to your current location, you can click on the location icon on the right bottom of the map and select the current location by clicking on the map.\n\n
+
+        <b><u>How to update blood stock</u></b>\n\n
+1. When donor is already registered\n\n
+- Enter donor mobile number and verify the details\n
+- Enter units of blood donated and update\n\n
+
+2. When donor has no smart device\n\n
+- Update blood stock for this type of user with default blood group codes as follows\n
+111111111 - For A+ group\n
+222222222 - For A- group\n
+333333333 - For B+ group\n
+444444444 - For B- group\n
+555555555 - For AB+ group\n
+666666666 - For AB- group\n
+777777777 - For O+ group\n
+888888888 - For O- group\n\n
+
+3. When user has a smart device and not register into the system\n\n
+- Can update units of blood of this type of users either one way of above\n\n
+
+In a special case if you mistakenly added blood stock you can reduce it by issuing blood stock. Make sure to add a proper comment.\n\n
+
+        <b><u>How to release blood stock</u></b>\n\n
+- You can only release blood which belongs to your district\n
+- Providing a comment for the release is mandatory\n
+- A record will be add to the blood issue registry with your information upon a blood issue\n
+- You can view blood stock of other districts\n
+- If you need to ask for blood from another district can contact a facilitator who belongs to particular district by searching through Facilitator info\n\n
+</string>
+
+    <string name="locationHelp"><b><u>Location Selection Help\n\n</u></b><b>1. Map will take your current location automatically when you open the map.\n</b>
+        - You can select your current location by clicking on the marker.\n\n
+        <b>2. Search a location on your preference by typing on the search bar and click search. \n</b>
+    - You need to give a valid location. Once the location displays you can click on the marker and select the location.\n\n
+        <b>3. Select a location on your preferences apart from above ways.\n</b>
+        - You can long press on the map where you need to get as a location. Once marker add on that location you can select that by clicking on the marker. \n\n
+        <b>4. Select current location.\n</b>
+        - If you need to come again to your current location, you can click on the location icon on the right bottom of the map and select the current location by clicking on the map.\n\n
+    </string>
+
+
+    <string name="donor_diseases">Most people can give blood if they are in good health and if they fulfill basic requirements to become a blood donor. But there are severe illnesses which are not accepted to donate blood at any time. They are as follows:\n\n
+
+        <b>[1] Anaemia, including haematinic (iron, B12 and folate) deficiency\n</b>
+- Individuals who have chronic anaemia of unknown cause or associated with systemic disease: e.g. renal failure, rheumatoid diseasef.\n\n
+
+        <b>[2] Haemoglobinopathies\n</b>
+Defer permanently for individuals with:\n
+- Thalassaemia major or sickle cell disease.\n
+- Sickle cell trait for blood donation by apheresis procedure or for whole blood donation if the blood is to be leucofiltered.\n\n
+
+        <b>[3] Enzymopathies and inherited red cell membrane\n</b>
+- ndividuals with G6PD deficiency or inherited red cell membrane defects, with a history of haemolysis.\n\n
+
+        <b>[4] Thrombocytopenia\n</b>
+- Individuals with thrombocytopenia of unknown cause or associated with longterm haematological or systemic disease.\n\n
+
+        <b>[5] Coagulation disorders, including haemophilia A and B\n</b>
+- Individuals with coagulation factor deficiencies, whether inherited or acquired.\n\n
+
+<b>[6] Cardiovascular diseases\n</b>
+Defer permanently for individuals with:\n
+- Symptomatic ischaemic heart disease\n
+- Symptomatic peripheral vascular disease, including history of arterial thrombosis\n
+- History of myocardial infarction\n
+- Severe cardiac arrhythmia\n
+- Rheumatic fever with evidence of chronic heart disease\n
+- Acquired valvular disease with stenosis or regurgitation\n
+- Valve replacement\n
+- Hypertrophic cardiomyopathy\n
+- Palliated (i.e. uncorrected) congenital heart disease\n\n
+
+        <b>[7] Hypertension\n</b>
+- Individuals with hypertensive heart or renal disease\n\n
+
+        <b>[8] Venous thrombosis and thrombophlebitis\n</b>
+Defer permanently for individuals who have had:\n
+- Two or more episodes of venous thrombosis requiring treatment\n
+- Axillary vein thrombosis or thrombophlebitis affecting the upper limb\n
+- Two or more episodes of thrombophlebitis in the last 12 months\n\n
+
+        <b>[9] RESPIRATORY DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Respiratory disease if they are breathless at rest or on minimal exertion or are cyanosed\n
+- Severe obstructive airways disease, including those on long-term oral steroid therapy\n
+- Chronic or recurrent respiratory infections\n\n
+
+        <b>[10] GASTROINTESTINAL DISEASES\n</b>
+- Individuals with malabsorption syndromes (except treated coeliac disease)\n\n
+
+        <b>[11] METABOLIC AND ENDOCRINE DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Diabetes who require insulin\n
+- Complications of diabetes with multi-organ involvement\n\n
+
+        <b>[12] Thyroid disease\n</b>
+- Individuals with thyrotoxicosis due to Graves disease\n\n
+
+        <b>[13] MUNOLOGICAL DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Severe debilitating autoimmune disorders such as systemic lupus erythematosus, dermatomyositis or severe rheumatoid disease\n
+- Immunosuppression due to congenital or acquired hypogammaglobulinaemia or immunosuppressive medication, with the exception of individuals with IgA deficiency\n
+- History of anaphylaxis\n\n
+
+        <b>[14] RENAL AND URINARY TRACT DISEASES\n</b>
+- Individuals with chronic renal disease causing ill-health or anaemia, or associated with chronic or recurrent infection\n\n
+
+        <b>[15] CENTRAL NERVOUS SYSTEM DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Cerebrovascular disease (a history of transient cerebral ischaemic episodes or stroke)\n
+- Dementia or neurodegenerative disease due to any cause\n
+- Multiple sclerosis or other demyelinating diseases\n\n
+
+        <b>[16] MALIGNANT DISEASES\n</b>
+Defer permanently\n
+- Individuals with a history of malignant melanoma\n
+- Individuals with current or past haematological malignancy, including:\n
+  - Leukaemia: i.e. lymphoproliferative and myeloproliferative disorders\n
+  - Lymphomas\n
+  - Clonal haematological disorders such as:\n
+    - Polycythaemia rubra vera and essential thrombocythaemia\n
+    - Paroxysmal nocturnal haemoglobinuria\n
+  - Myelodysplastic syndromes\n\n
+
+<b>[17] MUSCULOSKELETAL DISORDERS\n</b>
+Defer permanently for individuals with systemic diseases affecting joints, such as:\n
+- Rheumatoid disease\n
+- Psoriatic arthropathy\n
+- Ankylosing spondylitis\n\n
+
+        <b>[18] SKIN DISEASES\n</b>
+Defer permanently for individuals with systemic diseases affecting the skin, such as:\n
+- Scleroderma\n
+- Systemic lupus erythematosus\n
+- Dermatomyositis\n
+- Systemic cutaneous amyloidosis\n\n
+
+        <b>[19] PSYCHIATRIC DISORDERS\n</b>
+- Individuals with psychotic disorders requiring maintenance treatment\n\n
+
+        <b>[20] IMMUNIZATIONS AND VACCINATIONS\n</b>
+- Hepatitis C\n
+  - Individuals with current or past HCV infection\n\n
+
+        <b>[21] MEDICATIONS\n</b>
+- Individuals treated with human pituitary-derived growth hormone because of case reports of transmission of iatrogenic Creutzfeldt-Jakob disease\n\n
+
+<b>[22] BLOOD TRANSFUSION AND TRANSPLANTATION\n</b>
+Defer permanently\n
+- Recipients of blood transfusion or any other human-derived therapeutic products since 1980 in a country in which the risk of vCJD has been identified\n
+- Individuals on regular treatment with plasma-derived coagulation factors (64)\n\n
+
+        <b>[23] Organ, stem cell and tissue transplantation\n</b>
+Defer permanently for recipients of:\n
+- Stem cell or organ transplantation\n
+- Allogeneic cells or tissue sourced since 1980 from countries in which the risk of vCJD has been identified\n
+- Dura mater graft\n
+- Corneal transplant\n
+- Xenograft\n
+- Non-human organ perfusion\n\n
+
+        <b>[24] Human immunodeficiency virus/Acquired\n</b>
+- Individuals with present or past clinical or laboratory evidence of HIV infection\n\n
+
+        <b>[25] HTLV I and HTLV II\n</b>
+Defer permanently\n
+- Individuals with HTLV I and/or II infection\n
+- Individuals whose mother or maternal grandmother has or had HTLV I and/or II infection, if blood screening for HTLV I and/or II infection is not available\n
+- Former sexual contacts of individuals with HTLV I and/or II infection, if blood screening for HTLV I and/or II infection is not available\n\n
+
+        <b>[26] Herpes viruses\n</b>
+Defer permanently\n
+- Individuals with HHV8 infection\n
+- Current and former sexual contacts of individuals with HHV8 infection\n\n
+
+    <b>[27] Mosquito-borne viruses\n</b>
+Defer permanently\n
+- Individuals who have ever had a diagnosis of malaria\n
+- Individuals who have ever had a diagnosis of Chagas disease\n
+- Individuals who have ever had a diagnosis of babesiosis\n
+- Individuals who have ever had a diagnosis of leishmaniasis\n\n
+
+        <b>[28] BACTERIAL INFECTIONS\n</b>
+- Individuals who have ever had a diagnosis of syphilis\n\n
+
+        <b>[29] Brucellosis\n</b>
+- Individuals who have ever had a diagnosis of brucellosis\n\n
+
+        <b>[30] RICKETTSIAL INFECTIONS\n</b>
+- Individuals with chronic Q fever\n\n
+
+<b>[31] Variant Creutzfeldt-Jakob disease\n</b>
+Defer permanently\n
+- Individuals with sporadic or familial CJD\n
+- First-degree relatives of individuals with sporadic or familial CJD\n
+- Individuals with vCJD\n
+- Individuals who have received a transfusion or any other human-derived therapeutic products since 1980 in a country in which the risk of vCJD has been identified\n
+- Individuals with a history of treatment with pituitary-derived human growth hormone, human gonadotrophin, dura mater graft, corneal transplant or neurosurgery\n\n
+
+        <b>[32] High-risk sexual behaviours\n</b>
+- Individuals whose sexual behaviour put them at high risk of transfusion transmissible infections\n\n
+
+        <b>[33] Injecting drug use\n</b>
+- Individuals with a history of injecting drug use\n\n
+
+
+If you have not exposed to any of these listed diseases, you can continue with registration as a blood donor by clicking on <b>Next</b> You are highly request <b><u>NOT</u></b> to register if you have exposed to any of these and in future after registration if you get any of these disease please inform your nearest hospital.\n\n
+
+        <b>NOTE:</b> At the time of blood donation you need to appear a basic test to check basic requirements to be a donor and if any illnesses identified, you will be disqualified to donate blood.\n\n
+    <b>SOURCE:</b>World Health Organization\n<a href="https://www.who.int/publications/i/item/9789241548519">Read More</a>
+
+    </string>
+    <string name="list_of_diseases">Most people can give blood if they are in good health and if they fulfill basic requirements to become a blood donor. But there are severe illnesses which are not accepted to donate blood at any time. They are as follows:\n\n
+
+        <b>[1] Anaemia, including haematinic (iron, B12 and folate) deficiency\n</b>
+- Individuals who have chronic anaemia of unknown cause or associated with systemic disease: e.g. renal failure, rheumatoid diseasef.\n\n
+
+        <b>[2] Haemoglobinopathies\n</b>
+Defer permanently for individuals with:\n
+- Thalassaemia major or sickle cell disease.\n
+- Sickle cell trait for blood donation by apheresis procedure or for whole blood donation if the blood is to be leucofiltered.\n\n
+
+        <b>[3] Enzymopathies and inherited red cell membrane\n</b>
+- ndividuals with G6PD deficiency or inherited red cell membrane defects, with a history of haemolysis.\n\n
+
+        <b>[4] Thrombocytopenia\n</b>
+- Individuals with thrombocytopenia of unknown cause or associated with longterm haematological or systemic disease.\n\n
+
+        <b>[5] Coagulation disorders, including haemophilia A and B\n</b>
+- Individuals with coagulation factor deficiencies, whether inherited or acquired.\n\n
+
+<b>[6] Cardiovascular diseases\n</b>
+Defer permanently for individuals with:\n
+- Symptomatic ischaemic heart disease\n
+- Symptomatic peripheral vascular disease, including history of arterial thrombosis\n
+- History of myocardial infarction\n
+- Severe cardiac arrhythmia\n
+- Rheumatic fever with evidence of chronic heart disease\n
+- Acquired valvular disease with stenosis or regurgitation\n
+- Valve replacement\n
+- Hypertrophic cardiomyopathy\n
+- Palliated (i.e. uncorrected) congenital heart disease\n\n
+
+        <b>[7] Hypertension\n</b>
+- Individuals with hypertensive heart or renal disease\n\n
+
+        <b>[8] Venous thrombosis and thrombophlebitis\n</b>
+Defer permanently for individuals who have had:\n
+- Two or more episodes of venous thrombosis requiring treatment\n
+- Axillary vein thrombosis or thrombophlebitis affecting the upper limb\n
+- Two or more episodes of thrombophlebitis in the last 12 months\n\n
+
+        <b>[9] RESPIRATORY DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Respiratory disease if they are breathless at rest or on minimal exertion or are cyanosed\n
+- Severe obstructive airways disease, including those on long-term oral steroid therapy\n
+- Chronic or recurrent respiratory infections\n\n
+
+        <b>[10] GASTROINTESTINAL DISEASES\n</b>
+- Individuals with malabsorption syndromes (except treated coeliac disease)\n\n
+
+        <b>[11] METABOLIC AND ENDOCRINE DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Diabetes who require insulin\n
+- Complications of diabetes with multi-organ involvement\n\n
+
+        <b>[12] Thyroid disease\n</b>
+- Individuals with thyrotoxicosis due to Graves disease\n\n
+
+        <b>[13] MUNOLOGICAL DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Severe debilitating autoimmune disorders such as systemic lupus erythematosus, dermatomyositis or severe rheumatoid disease\n
+- Immunosuppression due to congenital or acquired hypogammaglobulinaemia or immunosuppressive medication, with the exception of individuals with IgA deficiency\n
+- History of anaphylaxis\n\n
+
+        <b>[14] RENAL AND URINARY TRACT DISEASES\n</b>
+- Individuals with chronic renal disease causing ill-health or anaemia, or associated with chronic or recurrent infection\n\n
+
+        <b>[15] CENTRAL NERVOUS SYSTEM DISEASES\n</b>
+Defer permanently for individuals with:\n
+- Cerebrovascular disease (a history of transient cerebral ischaemic episodes or stroke)\n
+- Dementia or neurodegenerative disease due to any cause\n
+- Multiple sclerosis or other demyelinating diseases\n\n
+
+        <b>[16] MALIGNANT DISEASES\n</b>
+Defer permanently\n
+- Individuals with a history of malignant melanoma\n
+- Individuals with current or past haematological malignancy, including:\n
+  - Leukaemia: i.e. lymphoproliferative and myeloproliferative disorders\n
+  - Lymphomas\n
+  - Clonal haematological disorders such as:\n
+    - Polycythaemia rubra vera and essential thrombocythaemia\n
+    - Paroxysmal nocturnal haemoglobinuria\n
+  - Myelodysplastic syndromes\n\n
+
+<b>[17] MUSCULOSKELETAL DISORDERS\n</b>
+Defer permanently for individuals with systemic diseases affecting joints, such as:\n
+- Rheumatoid disease\n
+- Psoriatic arthropathy\n
+- Ankylosing spondylitis\n\n
+
+        <b>[18] SKIN DISEASES\n</b>
+Defer permanently for individuals with systemic diseases affecting the skin, such as:\n
+- Scleroderma\n
+- Systemic lupus erythematosus\n
+- Dermatomyositis\n
+- Systemic cutaneous amyloidosis\n\n
+
+        <b>[19] PSYCHIATRIC DISORDERS\n</b>
+- Individuals with psychotic disorders requiring maintenance treatment\n\n
+
+        <b>[20] IMMUNIZATIONS AND VACCINATIONS\n</b>
+- Hepatitis C\n
+  - Individuals with current or past HCV infection\n\n
+
+        <b>[21] MEDICATIONS\n</b>
+- Individuals treated with human pituitary-derived growth hormone because of case reports of transmission of iatrogenic Creutzfeldt-Jakob disease\n\n
+
+<b>[22] BLOOD TRANSFUSION AND TRANSPLANTATION\n</b>
+Defer permanently\n
+- Recipients of blood transfusion or any other human-derived therapeutic products since 1980 in a country in which the risk of vCJD has been identified\n
+- Individuals on regular treatment with plasma-derived coagulation factors (64)\n\n
+
+        <b>[23] Organ, stem cell and tissue transplantation\n</b>
+Defer permanently for recipients of:\n
+- Stem cell or organ transplantation\n
+- Allogeneic cells or tissue sourced since 1980 from countries in which the risk of vCJD has been identified\n
+- Dura mater graft\n
+- Corneal transplant\n
+- Xenograft\n
+- Non-human organ perfusion\n\n
+
+        <b>[24] Human immunodeficiency virus/Acquired\n</b>
+- Individuals with present or past clinical or laboratory evidence of HIV infection\n\n
+
+        <b>[25] HTLV I and HTLV II\n</b>
+Defer permanently\n
+- Individuals with HTLV I and/or II infection\n
+- Individuals whose mother or maternal grandmother has or had HTLV I and/or II infection, if blood screening for HTLV I and/or II infection is not available\n
+- Former sexual contacts of individuals with HTLV I and/or II infection, if blood screening for HTLV I and/or II infection is not available\n\n
+
+        <b>[26] Herpes viruses\n</b>
+Defer permanently\n
+- Individuals with HHV8 infection\n
+- Current and former sexual contacts of individuals with HHV8 infection\n\n
+
+    <b>[27] Mosquito-borne viruses\n</b>
+Defer permanently\n
+- Individuals who have ever had a diagnosis of malaria\n
+- Individuals who have ever had a diagnosis of Chagas disease\n
+- Individuals who have ever had a diagnosis of babesiosis\n
+- Individuals who have ever had a diagnosis of leishmaniasis\n\n
+
+        <b>[28] BACTERIAL INFECTIONS\n</b>
+- Individuals who have ever had a diagnosis of syphilis\n\n
+
+        <b>[29] Brucellosis\n</b>
+- Individuals who have ever had a diagnosis of brucellosis\n\n
+
+        <b>[30] RICKETTSIAL INFECTIONS\n</b>
+- Individuals with chronic Q fever\n\n
+
+<b>[31] Variant Creutzfeldt-Jakob disease\n</b>
+Defer permanently\n
+- Individuals with sporadic or familial CJD\n
+- First-degree relatives of individuals with sporadic or familial CJD\n
+- Individuals with vCJD\n
+- Individuals who have received a transfusion or any other human-derived therapeutic products since 1980 in a country in which the risk of vCJD has been identified\n
+- Individuals with a history of treatment with pituitary-derived human growth hormone, human gonadotrophin, dura mater graft, corneal transplant or neurosurgery\n\n
+
+        <b>[32] High-risk sexual behaviours\n</b>
+- Individuals whose sexual behaviour put them at high risk of transfusion transmissible infections\n\n
+
+        <b>[33] Injecting drug use\n</b>
+- Individuals with a history of injecting drug use\n\n
+
+
+If you have not exposed to any of these listed diseases, you are eligible to donate blood. In future if you get any of these disease please inform your nearest hospital.\n\n
+
+        <b>NOTE:</b> At the time of blood donation you need to appear a basic test to check basic requirements to be a donor and if any illnesses identified, you will be disqualified to donate blood.\n\n
+    <b>SOURCE:</b>World Health Organization\n<a href="https://www.who.int/publications/i/item/9789241548519">Read More</a>
+
+    </string>
+
+    <string name="confirm_campaign">*Before approving or rejecting this campaign you need to verify the resources availability for the above date with the hospital Inventory Management System.</string>
+
+    <string name="blood_request_registry">This will show the number of requests got for each blood group from blood requesters on selected date within your district</string>
+    <string name="blood_issue_registry">This will show the units of blood issued for each blood group from your district on selected date</string>
+    <string name="blood_receive_registry">This will show the units of blood received for each blood group from your district on selected date</string>
+    <string name="view_request_blood">This will display the units of blood available for each blood group in your district by today. You can request blood from individuals if it seems stock is low.</string>
+    <string name="blood_stock_analysis">This will show a analysis of issued blood units, received blood units, no of requests received for each blood group in your district on selected date</string>
+
+    <string name="title_activity_facilitator_home">FacilitatorHomeActivity</string>
+    <string name="title_activity_organize_campaign_verify_otp">OrganizeCampaignVerifyOtpActivity</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Facebook SDK related -->
+    <string name="facebook_app_id">2949569715363730</string>
+    <string name="facebook_login_protocol_scheme">fb2949569715363730</string>
+
+    <!-- Campaign data -->
+    <string name="txt_view_more"><u>View More</u></string>
+    <string name="txt_release"><u>RELEASE</u></string>
+    <string name="txt_request"><u>REQUEST</u></string>
+    <string name="title_activity_blood_issue_registry">BloodIssueRegistryActivity</string>
+    <string name="title_activity_donor_diseases">DonorDiseasesActivity</string>
+
+</resources>

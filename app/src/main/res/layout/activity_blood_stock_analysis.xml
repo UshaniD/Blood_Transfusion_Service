@@ -1,0 +1,1443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="5dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="5dp"
+    tools:context=".BloodStockAnalysisActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_arrow"
+            android:transitionName="transition_back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/oswald"
+            android:gravity="center"
+            android:text="BLOOD STOCK ANALYSIS"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:transitionName="transition_title_txt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/blood_stock_analysis"
+            android:textColor="@color/red"
+            android:textSize="16dp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Select date to analyze"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <DatePicker
+            android:id="@+id/input_stock_analysis_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_border"
+            android:calendarTextColor="@color/black"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:fontFamily="sans-serif-condensed"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:spinnersShown="true"
+            android:theme="@style/date_picker_theme" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="15dp"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="10dp"
+                android:text="SEARCH"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/blood_stock_analysis_registry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <GridLayout
+            android:id="@+id/blood_stock_analysis_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:columnCount="1"
+            android:rowCount="8"
+            android:stretchMode="columnWidth">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/A_positive"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="A+"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_positive_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_positive_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_positive_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_positive_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/A_negative"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="A-"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_negative_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_negative_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_negative_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/A_negative_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/B_positive"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="B+"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_positive_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_positive_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_positive_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_positive_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/B_negative"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="B-"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_negative_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_negative_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_negative_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/B_negative_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/AB_positive"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="AB+"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_positive_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_positive_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_positive_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_positive_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/AB_negative"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="AB-"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_negative_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_negative_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_negative_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/AB_negative_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/O_positive"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="O+"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_positive_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_positive_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_positive_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_positive_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="0dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Blood Group"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/O_negative"
+                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="O-"
+                            android:textColor="@color/red"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Received [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_negative_received_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Blood Issued [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_negative_issued_units"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="No of Requests Received:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_negative_requests_received"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="3dp"
+                                android:text="Avg. blood issued per request [units]:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/O_negative_avg_blood_issued"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:ems="0"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:text="0.0"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:paddingLeft="20dp"
+    android:paddingTop="5dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="5dp"
+    android:id="@+id/scrollView"
+    tools:context=".DonorDiseasesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_arrow"
+            android:transitionName="transition_back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/oswald"
+            android:gravity="center"
+            android:text="TERMS AND CONDITIONS"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:transitionName="transition_title_txt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar">
+
+            <TextView
+                android:id="@+id/donor_diseases"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/donor_diseases"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:gravity="left"/>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonScrollTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/backgroundOld"
+                android:src="@drawable/ic_arrow_up"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|right"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!--<Button
+            android:id="@+id/btn_user_accept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="15dp"
+            android:text="ACCEPT AND CONTINUE"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/main_button_color" />
+
+        <Button
+            android:id="@+id/btn_user_reject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="15dp"
+            android:text="BACK TO LOGIN"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:backgroundTint="@color/secondary_button_color" />-->
+
+    </LinearLayout>
+
+</ScrollView>

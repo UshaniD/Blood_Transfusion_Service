@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_light">#231313</color>
+    <color name="red">#C1251A</color>
+    <color name="colorPrimary">#AA2B2B</color>
+    <color name="colorPrimaryDark">#d50000</color>
+    <color name="colorAccent">#E38787</color>
+    <color name="primary_dark">#c13f31</color>
+    <color name="transparent_black_ten_percent">#1A000000</color>
+    <color name="background_light">#450606</color>
+    <color name="backgroundOld">#B62828</color>
+    <color name="background">#EF878A</color>
+    <color name="error_color">#F4948D</color>
+    <color name="black">#FF000000</color>
+    <color name="grey">#272525</color>
+    <color name="heading_color">#FF000000</color>
+    <color name="text_color">#FF000000</color>
+    <color name="background_color">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="error_msg_color">#C1251A</color>
+    <color name="main_button_color">#AA2B2B</color>
+    <color name="secondary_button_color">#450606</color>
+    <color name="app_theme_color">#B62828</color>
+</resources>

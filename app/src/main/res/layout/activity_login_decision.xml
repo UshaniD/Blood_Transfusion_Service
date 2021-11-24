@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".LoginDecisionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="moveToPreviousScreen"
+                android:padding="5dp"
+                android:src="@drawable/ic_back_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbl_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald"
+            android:padding="5dp"
+            android:text="USER ROLE BASED AUTHENTICATION"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_enter_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="Please register with one of following user types"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_user_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="start"
+            android:text="User is who want to organize blood donation campaigns, search for campaigns, request blood donations"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_user"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/main_button_color"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="USER"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_facilitator_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="start"
+            android:text="If you are an appointed officer of NBTS, register into system via here"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_facilitator"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="@color/main_button_color"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="FACILITATOR"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
